@@ -1,31 +1,41 @@
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
+
 variable "environment" {
-  description = "Environment name"
-  type        = string
+  type    = string
+  default = "dev"
 }
 
 variable "vpc_cidr" {
-  description = "VPC CIDR"
-  type        = string
+  type = string
 }
 
-variable "subnet_cidr" {
-  description = "Subnet CIDR"
-  type        = string
+# ✅ Multi-AZ subnet variables
+variable "subnet_cidr_1" {
+  type = string
 }
 
-variable "subnet_az" {
-  description = "Availability Zone"
-  type        = string
+variable "subnet_cidr_2" {
+  type = string
 }
 
+variable "subnet_az_1" {
+  type = string
+}
+
+variable "subnet_az_2" {
+  type = string
+}
+
+# ✅ Missing variable (IMPORTANT)
 variable "allowed_cidr_blocks" {
-  description = "Allowed CIDR blocks"
-  type        = list(string)
+  type = list(string)
 }
 
 variable "db_subnet_group_name" {
-  description = "DB subnet group name"
-  type        = string
+  type = string
 }
 
 variable "db_identifier" {
