@@ -1,2 +1,2 @@
-ami_id = "ami-02dfbd4ff395f2a1b"
-instance_type = "t2.nano"
+ami_id = "ami-01b14b7ad41e17ba4"
+instance_type = "t2.micro"
